@@ -1,0 +1,149 @@
+.about__container {
+  padding-top: 5rem;
+  min-height: 80vh;
+  background-color: var(--bg-black);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* about content */
+.about__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  position: relative;
+}
+
+.about__info p {
+  line-height: 2;
+  letter-spacing: 0.1rem;
+
+  max-width: 70%;
+}
+
+.about__info h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  font-size: 5rem;
+  letter-spacing: 0.2rem;
+  background-image: linear-gradient(
+    to right,
+    var(--text-white),
+    var(--text-yellow)
+  );
+
+  background-clip: text;
+  /* support for browser compatibility */
+  -webkit-background-clip: text;
+
+  /* set text color transparent and background color remains visible */
+  -webkit-text-fill-color: transparent;
+}
+
+.about__info svg {
+  width: 400px;
+}
+
+/* Media Queries */
+
+/* Big Screens */
+@media screen and (max-width: 1120px) {
+  /* about content/details */
+  .about__info p {
+    max-width: 90%;
+  }
+
+  .about__info h1 {
+    font-size: 4.5rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  /* about container */
+  .about__container {
+    min-height: 70vh;
+  }
+
+  /* about content/details */
+  .about__info p {
+    font-size: 1.1rem;
+    max-width: 90%;
+  }
+
+  .about__info h1 {
+    font-size: 3.8rem;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  /* about content/details */
+  .about__info h1 {
+    font-size: 3.6rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  /* about container */
+  .about__container {
+    min-height: 65vh;
+  }
+
+  /* about content/info */
+  .about__info h1 {
+    font-size: 3.4rem;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  /* about content/info */
+  .about__info h1 {
+    font-size: 3.2rem;
+  }
+}
+
+/* Mobile Screen */
+
+@media screen and (max-width: 430px) {
+  /* about content/info */
+  .about__info h1 {
+    top: 70%;
+    left: 65%;
+    font-size: 2.5rem;
+    width: 100%;
+  }
+
+  .about__info p {
+    max-width: 100%;
+  }
+
+  .about__info svg {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  /* about content/info */
+  .about__info h1 {
+    left: 62%;
+  }
+}
+@media screen and (max-width: 380px) {
+  /* about content/info */
+  .about__info h1 {
+    left: 61%;
+  }
+}
+@media screen and (max-width: 360px) {
+  /* about content/info */
+  .about__info h1 {
+    left: 60%;
+  }
+}

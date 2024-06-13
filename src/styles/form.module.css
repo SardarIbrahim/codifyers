@@ -1,0 +1,134 @@
+/* forms container */
+.forms__container {
+  min-height: 85vh;
+  position: relative;
+}
+
+/* forms header */
+.forms__header {
+  padding-top: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.forms__header h1 {
+  font-size: 2.5rem;
+}
+
+/* Forms Grid */
+.forms__grid {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(1, 50%);
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 3rem;
+  /* padding: 0 5rem; */
+}
+
+/* left side */
+
+.left__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.left__form .input__wrapper {
+  width: 100%;
+}
+
+.input__wrapper input {
+  padding-block: 0.3rem;
+  width: 100%;
+  outline: none;
+  margin-bottom: 3rem;
+
+  border: none;
+  border-bottom: 2px solid;
+  border-image: var(--input);
+  border-image-slice: 1;
+  border-image-slice: fill;
+}
+
+.input__wrapper textarea {
+  resize: none;
+  padding: 0.5rem;
+  width: 100%;
+  outline: none;
+  margin-bottom: 3rem;
+
+  border: 2px solid;
+  border-image: var(--input);
+  border-image-slice: 1;
+  border-image-slice: fill;
+}
+
+/* cta */
+
+.input__wrapper a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+
+  text-align: center;
+  display: block;
+  width: max-content;
+  padding: 1rem 2rem;
+  text-align: center;
+  background-color: #101820;
+  color: white;
+  text-decoration: none;
+  border-radius: 2rem;
+  border-width: 0.2rem;
+  border-style: solid;
+  transition: all 0.5s ease-in-out;
+}
+
+.input__wrapper a:hover {
+  transform: translateY(-5px);
+}
+
+/* form svg */
+.forms__container .form__svg {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  z-index: -1;
+}
+
+/* Media Queries */
+
+/* Mobile Screens */
+@media screen and (max-width: 430px) {
+  .forms__header h1 {
+    font-size: 2rem;
+  }
+
+  .forms__header p {
+    text-align: center;
+  }
+
+  .forms__grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .input__wrapper textarea {
+    margin-bottom: 1rem;
+  }
+
+  .input__wrapper a {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 365px) {
+  .input__wrapper textarea {
+    margin-bottom: 0rem;
+  }
+}
