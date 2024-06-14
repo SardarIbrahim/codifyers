@@ -2,7 +2,7 @@ import styles from '../styles/about.module.css'
 
 const About = () => {
   return (
-    <section className={styles.about__container}>
+    <section id='about' className={styles.about__container}>
       <div className={`${styles.about__info} container`}>
         <p>
           At Codifyers, we believe in the power of technology to drive

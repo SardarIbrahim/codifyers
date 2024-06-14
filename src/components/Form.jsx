@@ -1,10 +1,8 @@
-import form from '../assets/form.svg'
-
 import styles from '../styles/form.module.css'
 
 const Form = () => {
   return (
-    <section className={`${styles.forms__container} container`}>
+    <section id='form' className={`${styles.forms__container} container`}>
       {/* form header */}
       <div className={styles.forms__header}>
         <h1>Get in touch</h1>

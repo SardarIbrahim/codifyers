@@ -9,7 +9,7 @@ import styles from '../styles/work.module.css'
 
 const Work = () => {
   return (
-    <section className={`${styles.work__container} `}>
+    <section id='work' className={`${styles.work__container} `}>
       <h1>Our Work</h1>
       <Marquee speed={80} pauseOnClick pauseOnHover>
         {/* 1st item */}

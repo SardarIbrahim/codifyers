@@ -1,11 +1,33 @@
+import { useRef } from 'react'
+
+import gsap from 'gsap'
+import { useGSAP } from '@gsap/react'
+
 import styles from '../styles/hero.module.css'
 
 const Hero = () => {
+  const left = useRef()
+
+  useGSAP(() => {
+    // here animation goes
+
+    gsap.set(left.current, {
+      y: 50,
+      opacity: 0,
+    })
+
+    gsap.to(left.current, {
+      y: 0,
+      opacity: 1,
+      duration: 1,
+    })
+  })
+
   return (
     <section className={` ${styles.hero__container} container`}>
       {/* left */}
 
-      <div className={styles.left__hero}>
+      <div className={styles.left__hero} ref={left}>
         <h4>Product Growth Solution in Single Platform</h4>
 
         <h1>Give Your Businesses a</h1>

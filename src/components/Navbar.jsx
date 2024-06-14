@@ -1,8 +1,12 @@
-import { useRef } from 'react'
+import { useState, useRef } from 'react'
+
+import { useLenis } from '@studio-freight/react-lenis'
+
 import styles from '../styles/navbar.module.css'
-import { useState } from 'react'
 
 const Navbar = () => {
+  // lenis instance
+  const lenis = useLenis()
   // menu
   const menuRef = useRef()
   const [show, setShow] = useState(false)
@@ -34,17 +38,29 @@ const Navbar = () => {
           className={`${styles.nav__items} ${show ? styles.open__menu : ''}`}
         >
           <li onClick={openMenu}>
-            <a href='#'>Work</a>
+            <a href='#' onClick={() => lenis.scrollTo('#work')}>
+              Work
+            </a>
           </li>
           <li onClick={openMenu}>
-            <a href='#services'>Services</a>
+            <a href='#services' onClick={() => lenis.scrollTo('#services')}>
+              Services
+            </a>
           </li>
           <li onClick={openMenu}>
-            <a href='#'>About</a>
+            <a href='#' onClick={() => lenis.scrollTo('#about')}>
+              About
+            </a>
           </li>
 
           {/* cta */}
-          <button className={styles.touch} onClick={openMenu}>
+          <button
+            className={styles.touch}
+            onClick={() => {
+              openMenu()
+              lenis.scrollTo('#form')
+            }}
+          >
             Lets Connect
           </button>
         </ul>

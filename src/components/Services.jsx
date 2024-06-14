@@ -9,7 +9,7 @@ import styles from '../styles/services.module.css'
 
 const Services = () => {
   return (
-    <section id='services' className='container'>
+    <section id={`services`} className='container'>
       <div className={styles.services__info}>
         <h1>We Just Don&apos;t Build Solutions,</h1>
         <br />
@@ -20,7 +20,7 @@ const Services = () => {
 
       {/* cards */}
 
-      <div className={styles.cards__container}>
+      <div id='cards__container' className={styles.cards__container}>
         {/* 1st */}
         <div className={styles.card__item}>
           {/* image */}
