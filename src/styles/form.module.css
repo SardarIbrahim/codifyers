@@ -127,8 +127,22 @@
   }
 }
 
+@media screen and (max-width: 430px) {
+  /* forms container */
+  .forms__container {
+    min-height: 68vh;
+  }
+}
+
+@media screen and (max-width: 415px) {
+  /* forms container */
+  .forms__container {
+    min-height: 64vh;
+  }
+}
+
 @media screen and (max-width: 365px) {
-  .input__wrapper textarea {
-    margin-bottom: 0rem;
+  .input__wrapper a {
+    margin-top: 0rem;
   }
 }

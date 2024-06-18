@@ -7,3 +7,9 @@
   letter-spacing: 1px;
   background-color: var(--bg-black);
 }
+
+@media screen and (max-width: 395px) {
+  .footer {
+    margin-top: 1rem;
+  }
+}
