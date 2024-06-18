@@ -71,11 +71,10 @@
 
 /* cta */
 
-.input__wrapper a {
-  font-size: 1.5rem;
+.input__wrapper button {
+  font-size: 1rem;
   font-weight: bold;
   letter-spacing: 0.2rem;
-
   text-align: center;
   display: block;
   width: max-content;
@@ -88,10 +87,12 @@
   border-width: 0.2rem;
   border-style: solid;
   transition: all 0.5s ease-in-out;
+  margin-bottom: 25px;
 }
 
-.input__wrapper a:hover {
+.input__wrapper button:hover {
   transform: translateY(-5px);
+  cursor: pointer;
 }
 
 /* form svg */
@@ -122,8 +123,8 @@
     margin-bottom: 1rem;
   }
 
-  .input__wrapper a {
-    font-size: 1rem;
+  .input__wrapper button {
+    font-size: 0.8rem;
   }
 }
 

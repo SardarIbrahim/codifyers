@@ -1,6 +1,29 @@
 import styles from "../styles/form.module.css";
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 const Form = () => {
+  const form = useRef();
+
+  /* Send Email Function */
+  const sendEmail = (e) => {
+    e.preventDefault();
+    alert("Clicked");
+
+    emailjs
+      .sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", form.current, {
+        publicKey: "YOUR_PUBLIC_KEY",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
+  };
+
   return (
     <section id="form" className={`${styles.forms__container} container`}>
       {/* form header */}
@@ -10,31 +33,38 @@ const Form = () => {
       </div>
 
       {/* forms container */}
-      <div className={styles.forms__grid}>
+      <form className={styles.forms__grid} ref={form} onSubmit={sendEmail}>
         {/* left form */}
         <div className={styles.left__form}>
           {/* Name */}
           <div className={styles.input__wrapper}>
-            <input type="text" placeholder="Full Name" required />
+            <input type="text" placeholder="Full Name" name="name" required />
           </div>
 
           {/* Email */}
           <div className={styles.input__wrapper}>
-            <input type="email" placeholder="Email" required />
+            <input type="email" placeholder="Email" name="email" required />
           </div>
 
           {/* Message */}
           <div className={styles.input__wrapper}>
-            <textarea rows="4" cols="50" placeholder="Message"></textarea>
+            <textarea
+              rows="4"
+              cols="50"
+              placeholder="Message"
+              name="message"
+            ></textarea>
           </div>
 
           {/* submit */}
           <div className={styles.input__wrapper}>
             {/* cta */}
-            <a href="#">Submit ➖</a>
+            <button type="submit">
+              Submit ➖
+            </button>
           </div>
         </div>
-      </div>
+      </form>
 
       {/* forms svg */}
       <svg
